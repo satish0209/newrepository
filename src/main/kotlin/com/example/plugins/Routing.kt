@@ -189,8 +189,8 @@ fun Application.configureRouting() {
             }
 
 
-            this@routing.delete("/notes/{id}") {
-                val id = call.parameters["id"]?.toInt() ?: -1
+            this@routing.delete("/notes/{idno}") {
+                val idno = call.parameters["idno"]?.toInt() ?: -1
 
 
                 val deleterow = db.delete(NotesEntity) {
